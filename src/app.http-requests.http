@@ -1,0 +1,22 @@
+http://localhost:3000/health
+
+
+# POST http://localhost:3000/auth/register
+# Content-Type: application/json
+
+# {
+#     "email": "test@mail.com",
+#     "password": "password",
+#     "name":"Aayush"
+# }
+
+# POST http://localhost:3000/auth/login
+# Content-Type: application/json
+
+# {
+#     "email": "test@mail.com",
+#     "password": "password"
+# }
+
+# GET http://localhost:3000/auth/me
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5MTYwM2Q5My1lZGE1LTRkZTYtYWIwOC05OWVlZmIwNDBlMjAiLCJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NTQ3NTk2MjgsImV4cCI6MTc1NTM2NDQyOH0.kqD6_vb_KFPryR3TQ46s6ZdotP1tteyJ0aY6hLEgFHA

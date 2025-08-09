@@ -1,0 +1,98 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String  @id @default(uuid())
+  email    String  @unique
+  password String // hash password
+  name     String
+  isActive Boolean @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  wallets    Wallet[]
+  expenses   Expense[]
+  categories Category[]
+
+  @@map("users")
+}
+
+enum WalletType {
+  BANK
+  WALLET
+  UPI
+}
+
+model Wallet {
+  id      String     @id @default(uuid())
+  name    String
+  type    WalletType
+  balance Float      @default(0)
+  userId  String
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expenses Expense[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([type])
+  @@map("wallets")
+}
+
+model Category {
+  id          String  @id @default(uuid())
+  name        String
+  description String?
+  color       String?
+  icon        String?
+  userId      String
+
+  user     User      @relation(fields: [userId], references: [id])
+  expenses Expense[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([name, userId])
+  @@index([userId])
+  @@map("categories")
+}
+
+model Expense {
+  id          String   @id @default(uuid())
+  amount      Float
+  description String
+  date        DateTime @default(now())
+  userId      String
+  walletId    String
+  categoryId  String
+
+  user     User     @relation(fields: [userId], references: [id])
+  wallet   Wallet   @relation(fields: [walletId], references: [id])
+  category Category @relation(fields: [categoryId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([date])
+  @@index([categoryId])
+  @@index([walletId])
+  @@index([userId, date])
+  @@map("expenses")
+}
