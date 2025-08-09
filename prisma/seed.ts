@@ -22,7 +22,7 @@ async function main() {
 
   const wallets = [
     { name: 'Bank Account', type: WalletType.BANK, balance: 1000 },
-    { name: 'Cash', type: WalletType.WALLET, balance: 2000 },
+    { name: 'Cash', type: WalletType.CASH, balance: 2000 },
     { name: 'BHIM UPI LITE', type: WalletType.UPI, balance: 3000 },
   ];
 

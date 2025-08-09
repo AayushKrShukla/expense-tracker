@@ -82,7 +82,7 @@ export class AuthService {
     await this.prisma.wallet.createMany({
       data: [
         { name: 'SBI', type: 'BANK', userId },
-        { name: 'Wallet', type: 'WALLET', userId },
+        { name: 'Wallet', type: 'CASH', userId },
         { name: 'Lite', type: 'UPI', userId },
       ],
     });

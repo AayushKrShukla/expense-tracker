@@ -32,7 +32,7 @@ model User {
 
 enum WalletType {
   BANK
-  WALLET
+  CASH
   UPI
 }
 

@@ -1,4 +1,4 @@
-http://localhost:3000/health
+# http://localhost:3000/health
 
 
 # POST http://localhost:3000/auth/register
@@ -20,3 +20,28 @@ http://localhost:3000/health
 
 # GET http://localhost:3000/auth/me
 # Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5MTYwM2Q5My1lZGE1LTRkZTYtYWIwOC05OWVlZmIwNDBlMjAiLCJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NTQ3NTk2MjgsImV4cCI6MTc1NTM2NDQyOH0.kqD6_vb_KFPryR3TQ46s6ZdotP1tteyJ0aY6hLEgFHA
+
+
+# GET http://localhost:3000/wallets
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMjQ5MDNhMy0yNDZlLTRhN2ItOWVjOC01ZTFkODdhZDc5OTYiLCJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NTQ3NzU2ODksImV4cCI6MTc1NTM4MDQ4OX0.xWzVwyyOu8Czf5h6wsopnm6b0h6GoHmAEz7HRqRkRFI
+
+# GET http://localhost:3000/wallets/summary
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMjQ5MDNhMy0yNDZlLTRhN2ItOWVjOC01ZTFkODdhZDc5OTYiLCJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NTQ3NzU2ODksImV4cCI6MTc1NTM4MDQ4OX0.xWzVwyyOu8Czf5h6wsopnm6b0h6GoHmAEz7HRqRkRFI
+
+# POST http://localhost:3000/wallets
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMjQ5MDNhMy0yNDZlLTRhN2ItOWVjOC01ZTFkODdhZDc5OTYiLCJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NTQ3NzU2ODksImV4cCI6MTc1NTM4MDQ4OX0.xWzVwyyOu8Czf5h6wsopnm6b0h6GoHmAEz7HRqRkRFI
+# Content-Type: application/json
+
+# {
+#     "name": "Paytm",
+#     "type": "UPI",
+#     "balance": 0
+# }
+
+# PATCH http://localhost:3000/wallets/89b71833-1202-424e-8f89-87bcb07370c9
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMjQ5MDNhMy0yNDZlLTRhN2ItOWVjOC01ZTFkODdhZDc5OTYiLCJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NTQ3NzU2ODksImV4cCI6MTc1NTM4MDQ4OX0.xWzVwyyOu8Czf5h6wsopnm6b0h6GoHmAEz7HRqRkRFI
+# Content-Type: application/json
+
+# {
+#     "balance": 100
+# }

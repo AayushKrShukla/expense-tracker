@@ -19,6 +19,7 @@ import {
 import { RegisterDto } from './dto/register.dto';
 import type { RequestWithUser } from 'src/common/interfaces/request-user-interface';
 import { LocalAuthGuard } from './guards/local-auth.guard';
+import { LoginDto } from './dto/login.dto';
 
 @ApiTags('Authentication')
 @Controller('auth')
@@ -48,7 +49,7 @@ export class AuthController {
     status: 401,
     description: 'Invalid credentials',
   })
-  login(@Request() req: RequestWithUser) {
+  login(@Request() req: RequestWithUser, @Body() _: LoginDto) {
     return this.authService.login(req.user);
   }
 
