@@ -7,6 +7,7 @@ import {
 import { CreateCategoryDto } from './dto/create-category.dto';
 import { UpdateCategoryDto } from './dto/update-category.dto';
 import { PrismaService } from 'src/database/prisma.service';
+import { CategoryResponseDto } from './dto/category-response.dto';
 
 @Injectable()
 export class CategoriesService {
@@ -64,7 +65,7 @@ export class CategoriesService {
     }));
   }
 
-  async findOne(id: string, userId: string) {
+  async findOne(id: string, userId: string): Promise<CategoryResponseDto> {
     const category = await this.prisma.category.findFirst({
       where: { id, userId },
       include: {

@@ -4,6 +4,9 @@ export class CategoryResponseDto {
   @ApiProperty({ example: 'uuid-string' })
   id: string;
 
+  @ApiProperty({ example: 'user uuid-string' })
+  userId: string;
+
   @ApiProperty({ example: 'Food & Dining' })
   name: string;
 
@@ -23,7 +26,7 @@ export class CategoryResponseDto {
   updatedAt: Date;
 
   @ApiProperty({ required: false, example: 15 })
-  expenseCount?: number;
+  expenseCount: number;
 }
 
 export class CategorySummaryResponseDto {

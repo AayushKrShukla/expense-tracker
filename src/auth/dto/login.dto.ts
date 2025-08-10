@@ -11,7 +11,7 @@ export class LoginDto {
 
   @ApiProperty({
     description: 'User password',
-    example: 'Password',
+    example: 'password',
   })
   @IsString({ message: 'Password must be a string' })
   @MinLength(1, { message: 'Password is required' })
