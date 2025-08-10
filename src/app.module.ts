@@ -7,6 +7,7 @@ import { AuthModule } from './auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
 import { WalletsModule } from './wallets/wallets.module';
+import { CategoriesModule } from './categories/categories.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { WalletsModule } from './wallets/wallets.module';
     DatabaseModule,
     AuthModule,
     WalletsModule,
+    CategoriesModule,
   ],
   controllers: [AppController],
   providers: [

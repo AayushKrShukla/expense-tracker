@@ -45,3 +45,16 @@
 # {
 #     "balance": 100
 # }
+
+
+# GET http://localhost:3000/categories/e1d06c41-3b24-4a77-9db3-eeb9cbb89652
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMjQ5MDNhMy0yNDZlLTRhN2ItOWVjOC01ZTFkODdhZDc5OTYiLCJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NTQ4MzMyMjUsImV4cCI6MTc1NTQzODAyNX0.Y1SuaKPyLbggcVqpE2yRzaT4tf7YhDp3m7MFWv-pUbY
+
+
+# PATCH http://localhost:3000/categories/e1d06c41-3b24-4a77-9db3-eeb9cbb89652
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMjQ5MDNhMy0yNDZlLTRhN2ItOWVjOC01ZTFkODdhZDc5OTYiLCJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NTQ4MzMyMjUsImV4cCI6MTc1NTQzODAyNX0.Y1SuaKPyLbggcVqpE2yRzaT4tf7YhDp3m7MFWv-pUbY
+# Content-Type: application/json
+
+# {
+#   "description": "Tourism"
+# }
